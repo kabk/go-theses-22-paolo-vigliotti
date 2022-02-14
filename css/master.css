@@ -19,6 +19,16 @@ a:hover {
 }
 
 .collapsedtext {
-  color: Grey;
+  color: #4a4a4a;
   font-size: 0.75em;
+}
+
+.collapsedtext2 {
+  color: #757575;
+  font-size: 0.75em;
+}
+
+.inlineimg{
+  display: block;
+  max-width: 20vw;
 }
