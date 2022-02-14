@@ -1,0 +1,24 @@
+
+
+.main {
+  margin: 10vh 20vh;
+  display: inline-block;
+}
+p {
+  font-size:3em;
+  font-family: 'Volkhov', serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: MediumBlue;
+}
+
+.collapsedtext {
+  color: Grey;
+  font-size: 0.75em;
+}
