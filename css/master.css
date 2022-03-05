@@ -1,17 +1,92 @@
+body{
+  vertical-align: bottom;
+  padding-bottom: 10vh;
+}
+.counter {
+  position: absolute;
+  font-size:1.2rem;
+  font-family: "courier", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 4rem;
+  margin: 0 15vh;
+  padding-right: 1rem;
+  vertical-align: bottom;
+  border-right: 2px solid #000;
+  text-align: right;
+}
 
+.counter:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 5px;
+  right: 5px;
+  bottom: 0px;
+  border-right: 2px solid #000;
+}
 
 .main {
-  margin: 10vh 20vh;
+  margin: 0 20vh;
   display: inline-block;
+  counter-reset: line;
+  vertical-align: bottom;
 }
+
+.parent {
+  font-size: 1.3rem;
+  font-family: "courier", serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  line-height: 1.5rem;
+  margin: 1vh auto;
+  vertical-align: middle;
+  display: flex;
+}
+
+h1{
+  font-size: 2rem;
+  margin: 5vh auto;
+  text-align: center;
+}
+
 p {
-  font-size:3em;
-  font-family: 'Volkhov', serif;
+  font-size:2rem;
+  font-family: "calluna", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  text-indent: 2rem;
+  line-height: 4rem;
+}
+
+.toc{
+  display:inline-block;
+  text-indent: 2rem;
+}
+
+#first {
+  text-indent: 0;
+  padding-top: 2.5rem;
+}
+
+#first span {
+  text-indent: 2rem;
+  padding-top: 0;
+}
+
+.intro{
+  display: flex;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a:hover {
@@ -19,16 +94,68 @@ a:hover {
 }
 
 .collapsedtext {
-  color: #4a4a4a;
-  font-size: 0.75em;
+  color: #444;
+  font-size: 1.85rem;
+  line-height: 4rem;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+
+
 }
 
 .collapsedtext2 {
   color: #757575;
-  font-size: 0.75em;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  vertical-align: bottom;
 }
 
+.left{
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  min-width: 40%;
+  line-height: 2rem;
+  vertical-align: bottom;
+
+}
+
+.right{
+  font-size: 1rem;
+  font-family: sans-serif;
+  text-align: left;
+  margin: 0 5vh;
+  min-width: 40%;
+  line-height: 1.5rem;
+
+}
+
+.word{
+  background-color: yellow;
+
+}
+
+.word:hover{
+  color: inherit;
+}
+
+.collapseword{
+  border: 1px inset white;
+  font-size: 1.75rem;
+  line-height: 4rem;
+}
 .inlineimg{
   display: block;
   max-width: 20vw;
+}
+
+
+.main p:before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  border-right: 1px solid #222;
+  color: #777
 }
