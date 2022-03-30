@@ -197,7 +197,7 @@ figure {
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
+    vertical-align: bottom;
     max-width: 55%;
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
@@ -211,7 +211,7 @@ figcaption {
     margin-bottom: 0;
     font-size: 1.1rem;
     line-height: 1.6;
-    vertical-align: baseline;
+    vertical-align: bottom;
     position: relative;
     max-width: 40%;
 }
@@ -272,12 +272,11 @@ img {
     float: right;
     clear: right;
     margin-right: -35%;
-    width: 20vw;
-    margin-top: 1rem;
+    width: 15vw;
+    margin-top: 0;
     margin-bottom: 0;
     font-size: 1.1rem;
-    line-height: 1.3;
-    vertical-align: baseline;
+    vertical-align: bottom;
     position: sticky;
     top: 10vh;
     text-align: left !important;
@@ -292,7 +291,7 @@ img {
 .sidenote:before {
     font-family: et-book-roman-old-style;
     position: relative;
-    vertical-align: baseline;
+    vertical-align: bottom;
 }
 
 .sidenote-number:after {
@@ -376,11 +375,12 @@ span.newthought {
 
 input.margin-toggle {
     display: none;
+    padding: 0;
 }
 
 label.sidenote-number {
     display: inline-block;
-    max-height: 2rem; /* should be less than or equal to paragraph line-height */
+    max-height: 1rem; /* should be less than or equal to paragraph line-height */
 }
 
 label.margin-toggle:not(.sidenote-number) {
@@ -462,13 +462,16 @@ label.margin-toggle:not(.sidenote-number) {
         left: 1rem;
         clear: both;
         width: 95%;
-        margin: 1rem 2.5%;
-        vertical-align: baseline;
+        margin: 0;
+        padding: 0;
+        vertical-align: bottom;
         position: relative;
     }
 
     label {
         cursor: pointer;
+        margin: 0;
+        padding: 0;
     }
 
     div.table-wrapper,

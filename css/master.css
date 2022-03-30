@@ -1,51 +1,29 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'maxeville_mono_trialregular';
+    src: url('maxeville_mono_trial_regular-webfont.eot');
+    src: url('maxeville_mono_trial_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('maxeville_mono_trial_regular-webfont.woff2') format('woff2'),
+         url('maxeville_mono_trial_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
   vertical-align: bottom;
   padding-bottom: 10vh;
-}
-.counter {
-  position: absolute;
-  font-size:1.2rem;
-  font-family: "courier", serif;
-  font-weight: 400;
-  font-style: normal;
-  margin: 0;
-  padding: 0;
   line-height: 4rem;
-  margin: 0 15vh;
-  padding-right: 1rem;
-  vertical-align: bottom;
-  border-right: 2px solid #000;
-  text-align: right;
+  font-family: 'maxeville_mono_trialregular';
 }
 
-.counter:before {
-  content: " ";
-  position: absolute;
-  z-index: -1;
-  top: 0px;
-  left: 5px;
-  right: 5px;
-  bottom: 0px;
-  border-right: 2px solid #000;
+a {
+  color: inherit;
+  text-decoration: none !important;
 }
 
-.main {
-  margin: 0 20vh;
-  display: inline-block;
-  counter-reset: line;
-  vertical-align: bottom;
-}
-
-.parent {
-  font-size: 1.3rem;
-  font-family: "courier", serif;
-  font-weight: 400;
-  font-style: normal;
-  padding: 0;
-  line-height: 1.5rem;
-  margin: 1vh auto;
-  vertical-align: middle;
-  display: flex;
+a:hover {
+  color: MediumBlue;
 }
 
 h1{
@@ -65,6 +43,84 @@ p {
   line-height: 4rem;
 }
 
+.counter {
+  position: absolute;
+  font-size:1.2rem;
+  font-family: 'maxeville_mono_trialregular';
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 4rem;
+  left: 6vw;
+  padding-right: 1rem;
+  vertical-align: bottom;
+  border-right: 2px solid #000;
+  text-align: right;
+  overflow-y: hidden;
+}
+
+.imgs {
+  position: absolute;
+  font-size:1.2rem;
+  font-family: 'maxeville_mono_trialregular';
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 4rem;
+  right: 20vw;
+  text-align: right;
+  overflow-y: hidden;
+}
+
+#lcount{
+  position: fixed;
+  right: 10vw;
+  top:3vh;
+  width: 10vw;
+  height: 7vh;
+  background-color: red;
+  overflow: visible;
+  font-size: 2em;
+  font-family: 'maxeville_mono_trialregular';
+  font-weight: normal;
+  font-style: normal;
+
+
+}
+
+.counter:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 5px;
+  right: 5px;
+  bottom: 0px;
+  border-right: 2px solid #000;
+}
+
+.main {
+  margin: 0 8vw 0 12vw;
+  display: inline-block;
+  counter-reset: line;
+  vertical-align: bottom;
+  line-height: 4rem;
+}
+
+.parent {
+  font-size: 1.3rem;
+  font-family: "courier", serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  line-height: 1.5rem;
+  margin: 1vh auto;
+  vertical-align: middle;
+  display: flex;
+}
+
 .toc{
   display:inline-block;
   text-indent: 2rem;
@@ -72,48 +128,58 @@ p {
 
 #first {
   text-indent: 0;
-  padding-top: 2.5rem;
+  padding-top: 5.5rem;
+
 }
 
 #first span {
   text-indent: 2rem;
   padding-top: 0;
+
+}
+
+span{
+  padding: 0;
+  margin: 0;
 }
 
 .intro{
   display: flex;
+  height: 18.5rem;
+  font-family: 'maxeville_mono_trialregular' !important;
+
 }
 
-a {
-  color: inherit;
-  text-decoration: none !important;
-}
 
-a:hover {
-  color: MediumBlue;
-}
 
 .collapsedtext {
-  color: #444;
+  color: white;
   font-size: 1.85rem;
   line-height: 4rem;
   margin: 0;
   padding: 0;
-  vertical-align: bottom;
+  vertical-align:bottom;
+  background-color: #444
 
 
 }
 
+input{
+  margin: 0;
+  padding: 0;
+}
 .collapsedtext2 {
-  color: #757575;
-  font-size: 1.5rem;
+  color: #aaaaaa;
+  font-size: 1.2rem;
   line-height: 4rem;
   vertical-align: bottom;
+  margin: 0;
+  padding: 0;
 }
 
 .left{
   font-size: 1.3rem;
-  font-family: sans-serif;
+
   text-align: center;
   margin: 0 auto;
   min-width: 40%;
@@ -124,9 +190,8 @@ a:hover {
 
 .right{
   font-size: 1rem;
-  font-family: sans-serif;
   text-align: left;
-  margin: 0 5vh;
+  margin: 0;
   min-width: 40%;
   line-height: 1.5rem;
 
@@ -134,7 +199,10 @@ a:hover {
 
 .word{
   background-color: yellow;
+}
 
+.word2{
+  background-color: cyan;
 }
 
 .word:hover{
@@ -147,10 +215,16 @@ a:hover {
   line-height: 4rem;
 }
 .inlineimg{
-  display: block;
-  max-width: 20vw;
+  display: inline;
+  max-height: 3.5rem;
+
 }
 
+.inlineimg:hover{
+  max-height: 40rem;
+  padding-right: 1vw;
+  float: right;
+}
 
 .main p:before {
   counter-increment: line;
@@ -158,4 +232,83 @@ a:hover {
   display: inline-block;
   border-right: 1px solid #222;
   color: #777
+}
+
+/* website media queries */
+
+@media (max-width: 779px) {
+
+  /* styles for screen sizes 779px, should covers 'mobile' and 'tablet' */
+  /* style this one first and then use the two others to 'override' some styles (exceptions/details) */
+  body{
+    width: auto;
+    max-width: auto;
+    margin: 0;
+    padding: 0 3vw;
+  }
+
+  .intro{
+    height: 28.5rem;
+
+  }
+
+  .main {
+    margin: 0;
+    padding:0 0 0 10vw;
+    display: inline-block;
+    counter-reset: line;
+    vertical-align: bottom;
+    line-height: 4rem;
+  }
+
+  p{
+    line-height: 2rem;
+    font-size: 1.3rem;
+  }
+
+  .counter {
+    line-height: 2rem;
+    font-size: .8rem;
+    left: -1vw;
+  }
+
+  img {
+
+    width: auto;
+    max-width: auto;
+    max-height: 2rem;
+  }
+
+  .inlineimg{
+    max-height: 2rem;
+  }
+
+  /* utilities */
+
+  .desktop{display:none!important;}
+  .mobile{display:block;}
+
+}
+
+
+
+@media (max-width: 339px) {
+
+
+}
+
+
+
+@media (max-width: 779px) and (orientation: landscape) {
+
+  /* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
+
+}
+
+
+
+@media (min-width: 780px) and (max-width: 992px) {
+
+  /* use this query to apply style for 'small' desktop screens */
+
 }
