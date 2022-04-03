@@ -478,6 +478,15 @@ nav a {
       left: 3vw;
     }
 
+    .biblio {
+      margin-left: 1.5rem;
+      text-indent: -1.5rem;
+      font-size: 3.5rem;
+      display: inline-block;
+      /* overflow: hidden;
+      text-overflow: ellipsis; */
+     }
+
 }
 
 
