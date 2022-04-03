@@ -394,8 +394,12 @@
       $('#lcount').text(lc);
     };
 
-    counterSize();
-    counterFill();
+    $(window).bind("load", function () {
+      counterSize();
+      counterFill();
+    });
+
+
 
     $('.collapse').on('hidden.bs.collapse', function () {
       counterSize();
