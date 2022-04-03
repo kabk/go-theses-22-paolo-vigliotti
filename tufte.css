@@ -470,11 +470,10 @@ label.margin-toggle:not(.sidenote-number) {
 
     .sidenote,
     .marginnote {
-        display: block;
-        float: left;
-        left: 1rem;
-        clear: both;
-        width: 95%;
+        display: inline;
+        font-size: 2rem;
+        line-height: 4rem;
+        width: 100%;
         margin: .5rem 0;
         padding: 0;
         vertical-align: bottom;

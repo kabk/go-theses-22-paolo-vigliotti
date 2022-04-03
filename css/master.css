@@ -189,7 +189,6 @@ visibility: hidden;
 #first {
   text-indent: 0;
   padding-top: 7rem;
-
 }
 
 .smcp {
@@ -350,37 +349,47 @@ nav a {
   }
 
   h1{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .intro{
-    height: 52.5rem;
+    height: auto;
     flex-direction: column;
-
   }
 
-  .right{
-    font-size: 1rem;
-    text-align: left;
-    margin: 0 0 0 2rem;
-    min-width: 40%;
+  .left, .parent{
+    font-size: 2rem;
     line-height: 2rem;
 
   }
 
+  .right{
+    font-size: 2rem;
+    text-align: left;
+    margin: 0 0 0 2rem;
+    min-width: 40%;
+    line-height: 4rem;
+
+  }
+
   .biblio {
-    margin-left: 1.5rem;
-    text-indent: -1.5rem;
-    font-size: 1rem;
+    margin-left: 2rem;
+    text-indent: -2rem;
+    font-size: 2rem;
     display: inline-block;
     /* overflow: hidden;
     text-overflow: ellipsis; */
    }
 
+   #first {
+     text-indent: 0;
+     padding-top: 3.5rem;
+   }
+
 
   .main {
     margin: 0;
-    padding:0 0 0 10vw;
+    padding:0 0 1vh 10vw;
     display: inline-block;
     counter-reset: line;
     vertical-align: bottom;
@@ -389,35 +398,35 @@ nav a {
   }
 
   p {
-    line-height: 2rem;
-    font-size: 1.3rem;
-    text-indent: 1rem;
+    line-height: 4rem;
+    font-size: 2.5rem;
+    text-indent: 2rem;
   }
 
   .collapsedtext {
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 2.2rem;
+    line-height: 4rem;
     text-indent: 1rem;
   }
 
   .collapsedtext2 {
-    font-size: 1.1rem;
-    line-height: 2rem;
+    font-size: 2rem;
+    line-height: 4rem;
   }
 
   .quote{
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 
   .counter {
-    line-height: 2rem;
-    font-size: .8rem;
+    line-height: 4rem;
+    font-size: 1.5rem;
     left: 3vw;
   }
 
   .paragraphtitle {
 
-    font-size: 1rem;
+    font-size: 2rem;
     padding: .5rem;
     margin: 0;
     border: 1px solid;
@@ -433,7 +442,7 @@ nav a {
 
     /* width: auto;
     max-width: auto; */
-    max-height: 70rem;
+    max-height: 80rem;
   }
 
   /* utilities */
