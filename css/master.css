@@ -19,12 +19,90 @@ body{
 
 a {
   color: inherit;
-  text-decoration: none !important;
+  text-decoration: none;
+  transition: .5s all;
+  transition-delay: 1s;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+
 }
 
 a:hover {
-  color: MediumBlue;
+background-color: black;
+color: white;
+transition-delay: 0;
+transition: .3s all;}
+
+ span.marginnote {
+color: black !important;
 }
+
+
+
+a:before {
+  content:"";
+  position:fixed;
+  inset:0 0 100%;
+  z-index:999;
+}
+a:hover:before {
+  animation:h .3s;
+}
+
+.sidenote a:hover {
+color: inherit;
+background-color: inherit;
+text-decoration: underline;
+}
+
+
+.inlineimg{
+  display: inline;
+  max-height: 3.5rem;
+  transition: .5s all;
+  transition-delay: .3s;
+
+}
+
+.inlineimg:hover{
+  max-height: 40rem;
+  transition-delay: 0;
+  transition: .2s all;
+}
+
+.inlineimg:before {
+  content:"";
+  position:fixed;
+  inset:0 0 100%;
+  z-index:9999999999999999999;
+}
+
+.inlineimg:hover:before {
+  animation:h .3s;
+}
+
+@keyframes h{
+  0%,98% {inset:0;}
+}
+
+.outlineimg{
+position: sticky;
+ max-height: 3.5rem;
+  transition: .5s all;
+  transition-delay: 1s;
+
+}
+
+.outlineimg:hover{
+  display: inline;
+  float: left;
+  max-height: 40rem;
+  padding-right: 1vw;
+  transition-delay: 0;
+  transition: .3s all;
+}
+
 
 h1{
   font-size: 2rem;
@@ -68,10 +146,11 @@ p {
   font-style: normal;
   margin: 0;
   padding: 0;
+  padding-top: 5.5rem;
   line-height: 4rem;
-  right: 20vw;
+  right: 24vw;
   text-align: right;
-  overflow-y: hidden;
+  z-index: 99999999999999;
 }
 
 #lcount{
@@ -132,16 +211,46 @@ p {
 
 }
 
-#first span {
-  text-indent: 2rem;
-  padding-top: 0;
-
+.smcp {
+  -moz-font-feature-settings: 'c2sc';
+  -webkit-font-feature-settings: 'c2sc';
+  -o-font-feature-settings: 'c2sc';
+  font-feature-settings: 'c2sc';
 }
 
 span{
   padding: 0;
   margin: 0;
 }
+
+.paragraphtitle {
+  font-family: 'maxeville_mono_trialregular';
+  font-size: 1.5rem;
+ padding: .5rem;
+ margin: 0;
+border: 1px solid;
+ box-sizing:border-box;
+vertical-align: bottom;
+position: sticky;
+top:2vh;
+background-color: #fffff8;
+}
+
+.quote{
+  padding: 0;
+  padding-left: 5vw;
+  margin-bottom: -2px;
+  font-size: 1.7rem;
+  display: block;
+  color: black;
+  text-indent: 0 !important;
+  background-color: #fff;
+  border: 1px solid;
+  box-sizing:border-box;
+
+}
+
+
 
 .intro{
   display: flex;
@@ -153,28 +262,41 @@ span{
 
 
 .collapsedtext {
-  color: white;
+
   font-size: 1.85rem;
   line-height: 4rem;
   margin: 0;
   padding: 0;
   vertical-align:bottom;
-  background-color: #444
+  /* color: white; */
+  background-color: #fff;
+  text-indent: 2rem;
+  border: 1px solid;
+  margin-bottom: -2px;
+}
+
+#collapse18 {
+border-right: none;
+margin-bottom: -4px;
+vertical-align:bottom;
 
 
 }
+
+
 
 input{
   margin: 0;
   padding: 0;
 }
 .collapsedtext2 {
-  color: #aaaaaa;
   font-size: 1.2rem;
   line-height: 4rem;
   vertical-align: bottom;
   margin: 0;
   padding: 0;
+  background-color: #fff;
+
 }
 
 .left{
@@ -182,7 +304,7 @@ input{
 
   text-align: center;
   margin: 0 auto;
-  min-width: 40%;
+  min-width: 20%;
   line-height: 2rem;
   vertical-align: bottom;
 
@@ -192,7 +314,7 @@ input{
   font-size: 1rem;
   text-align: left;
   margin: 0;
-  min-width: 40%;
+  min-width: 20%;
   line-height: 1.5rem;
 
 }
@@ -214,23 +336,27 @@ input{
   font-size: 1.75rem;
   line-height: 4rem;
 }
-.inlineimg{
-  display: inline;
-  max-height: 3.5rem;
 
+.collapse {
+  margin: 0;
+  padding: 0;
 }
 
-.inlineimg:hover{
-  max-height: 40rem;
-  padding-right: 1vw;
-  float: right;
-}
+/* .bibliography {
+  margin: 0 0 0 2rem;
+} */
 
-.main p:before {
+.biblio {
+  margin-left: 4rem;
+  text-indent: -4rem;
+  font-size: 1.5rem;
+  display: block;
+ }
+
+.main p.chapter:before {
   counter-increment: line;
   content: counter(line);
   display: inline-block;
-  border-right: 1px solid #222;
   color: #777
 }
 
@@ -252,6 +378,16 @@ input{
 
   }
 
+  .biblio {
+    margin-left: 2rem;
+    text-indent: 0;
+    font-size: 1rem;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   }
+
+
   .main {
     margin: 0;
     padding:0 0 0 10vw;
@@ -259,6 +395,8 @@ input{
     counter-reset: line;
     vertical-align: bottom;
     line-height: 4rem;
+    max-width: 80vw;
+
   }
 
   p{
@@ -274,9 +412,9 @@ input{
 
   img {
 
-    width: auto;
-    max-width: auto;
-    max-height: 2rem;
+    /* width: auto;
+    max-width: auto; */
+    max-height: 70rem;
   }
 
   .inlineimg{
