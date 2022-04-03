@@ -338,7 +338,7 @@ nav a {
 
 /* website media queries */
 
-@media (max-width: 992px) and (-webkit-min-device-pixel-ratio: 1) {
+@media (max-width: 992px) {
 
   /* styles for screen sizes 779px, should covers 'mobile' and 'tablet' */
   /* style this one first and then use the two others to 'override' some styles (exceptions/details) */
@@ -448,7 +448,7 @@ nav a {
 
 }
 
-@media only screen and (max-width: 458px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media (max-width: 458px)  {
 
 
     p {
