@@ -448,7 +448,7 @@ nav a {
 
 }
 
-@media (max-width: 458px)  {
+@media (max-width: 458px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 
 
     p {
