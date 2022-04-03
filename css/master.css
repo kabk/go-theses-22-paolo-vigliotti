@@ -448,7 +448,7 @@ nav a {
 
 }
 
-@media only screen and (min-width: 300px) and (min-height: 400px) and (max-width: 458px) and (max-height: 926px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen and (max-width: 458px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 
 
     p {
